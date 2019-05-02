@@ -35,7 +35,6 @@ namespace ProjectMotivator
         {
             CitateLabel.Content = "\"" + quote.QuoteText + "\"";
             ByLabel.Content = quote.QuoteAuthor;
-            //хоба
         }
     }
 }
