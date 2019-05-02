@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectMotivator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="200" Width="800" ResizeMode="NoResize">
     <Grid>
-        
+        <Label Content="Цитата дня:" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" FontSize="40" Height="63"/>
+        <Label x:Name="CitateLabel" Content="&quot;Дойдя до конца, люди смеются над страхами, мучившими их вначале.&quot;" HorizontalAlignment="Center" Margin="0,63,0,0" VerticalAlignment="Top" Height="35" FontSize="18" FontStyle="Italic"/>
+        <Label x:Name="ByLabel" Content="Пауло Коэльо " HorizontalAlignment="Right" Margin="0,103,50,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Cursor="None"/>
+
     </Grid>
 </Window>
