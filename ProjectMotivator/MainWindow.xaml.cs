@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace ProjectMotivator
 {
@@ -20,15 +21,31 @@ namespace ProjectMotivator
     /// </summary>
     public partial class MainWindow : Window
     {
-        Quote[] quotes = new Quote[] { new Quote("Дойдя до конца, люди смеются над страхами, мучившими их вначале.", "Пауло Коэльо"),
-            new Quote("Если ты не знаешь, чего хочешь, ты в итоге останешься с тем, чего точно не хочешь.", "Чак Паланик"),
-            new Quote("Чтобы дойти до цели, надо идти.", "Оноре де Бальзак")};
+
+
+        List<Quote> quotes = new List<Quote>();
 
         public MainWindow()
         {
             InitializeComponent();
 
-            ApllyQuote(quotes[2]);
+            quotes = QuotesFromData();
+            ApllyQuote(quotes[5]);
+        }
+
+        List<Quote> QuotesFromData()
+        {
+            List<Quote> quotes = new List<Quote>();
+            using (StreamReader sr = new StreamReader("Data.txt", System.Text.Encoding.Default))
+            {
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    string[] lines = line.Split('|');
+                    quotes.Add(new Quote(lines[0], lines[1]));
+                }
+            }
+            return quotes;
         }
 
         void ApllyQuote(Quote quote)
