@@ -24,13 +24,21 @@ namespace ProjectMotivator
 
         Random rand = new Random();
         List<Quote> quotes = new List<Quote>();
+        int randomIndex = 0;
 
         public MainWindow()
         {
             InitializeComponent();
 
             quotes = QuotesFromData();
-            ApllyQuote(quotes[rand.Next(0,quotes.Count)]);
+
+            do
+            {
+                randomIndex = rand.Next(0, quotes.Count);
+            }
+            while (randomIndex == Properties.Settings.Default.indexLast);
+            Properties.Settings.Default.indexLast = randomIndex;
+            ApllyQuote(quotes[randomIndex]);
         }
 
         List<Quote> QuotesFromData()
