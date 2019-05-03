@@ -22,7 +22,7 @@ namespace ProjectMotivator
     public partial class MainWindow : Window
     {
 
-
+        Random rand = new Random();
         List<Quote> quotes = new List<Quote>();
 
         public MainWindow()
@@ -30,7 +30,7 @@ namespace ProjectMotivator
             InitializeComponent();
 
             quotes = QuotesFromData();
-            ApllyQuote(quotes[5]);
+            ApllyQuote(quotes[rand.Next(0,quotes.Count)]);
         }
 
         List<Quote> QuotesFromData()
