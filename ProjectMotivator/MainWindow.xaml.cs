@@ -50,7 +50,7 @@ namespace ProjectMotivator
 
         void ApllyQuote(Quote quote)
         {
-            CitateLabel.Content = "\"" + quote.QuoteText + "\"";
+            CitateLabel.Text = "\"" + quote.QuoteText + "\"";
             ByLabel.Content = quote.QuoteAuthor;
         }
     }
