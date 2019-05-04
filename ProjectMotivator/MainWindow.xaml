@@ -10,7 +10,7 @@
         <Label Content="Цитата дня:" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top" FontSize="40" Height="63"/>
         <Label x:Name="ByLabel" Content="Пауло Коэльо " HorizontalAlignment="Right" Margin="0,115,49.6,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Cursor="None" Height="35"/>
         <TextBlock x:Name="CitateLabel" HorizontalAlignment="Center" Margin="45,50,44.6,0" TextWrapping="Wrap" Text="&quot;Дойдя до конца, люди смеются над страхами, мучившими их вначале.&quot;мучившими их вначале.&quot;мучившими их вначале.&quot;мучившими их вначале." VerticalAlignment="Top" Width="704" Height="65" FontSize="16" FontStyle="Italic" TextAlignment="Center"/>
-        <Button x:Name="btnAdd" Content="+" HorizontalAlignment="Left" Margin="744,10,0,0" VerticalAlignment="Top" Width="37" Height="150" FontSize="20" FontWeight="Bold" Click="BtnAdd_Click"/>
+        <Button x:Name="btnAdd" Content="+" HorizontalAlignment="Left" Margin="744,0,0,0" VerticalAlignment="Top" Width="37" Height="160" FontSize="20" FontWeight="Bold" Click="BtnAdd_Click"/>
 
     </Grid>
 </Window>

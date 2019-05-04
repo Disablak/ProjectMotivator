@@ -64,7 +64,9 @@ namespace ProjectMotivator
 
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
-            
+            Window1 addNewQuote = new Window1();
+            addNewQuote.Show();
+            //addNewQuote.Activate();
         }
     }
 }
