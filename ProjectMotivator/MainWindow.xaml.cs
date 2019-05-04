@@ -61,5 +61,10 @@ namespace ProjectMotivator
             CitateLabel.Text = "\"" + quote.QuoteText + "\"";
             ByLabel.Content = quote.QuoteAuthor;
         }
+
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }
