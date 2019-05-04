@@ -38,6 +38,7 @@ namespace ProjectMotivator
             }
             while (randomIndex == Properties.Settings.Default.indexLast);
             Properties.Settings.Default.indexLast = randomIndex;
+            Properties.Settings.Default.Save();
             ApllyQuote(quotes[randomIndex]);
         }
 
