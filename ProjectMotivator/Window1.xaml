@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectMotivator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="200" Width="800" ResizeMode="NoResize">
+        Title="Добавить цитату" Height="200" Width="800" ResizeMode="NoResize">
     <Grid>
-        <TextBox x:Name="textBox" HorizontalAlignment="Center" Height="61" Margin="97,10,96.6,0" TextWrapping="Wrap" Text="&lt;Цитата&gt;" VerticalAlignment="Top" Width="600" FontSize="16" FontStyle="Italic"/>
-        <TextBox x:Name="textBox1" HorizontalAlignment="Center" Height="25" Margin="97,76,96.6,0" TextWrapping="Wrap" Text="&lt;Имя&gt;" VerticalAlignment="Top" Width="600" FontSize="18" FontWeight="Bold"/>
-        <Button x:Name="button" Content="Добавить" HorizontalAlignment="Center" Margin="0,110,0,0" VerticalAlignment="Top" Width="197" Height="40" FontSize="20"/>
+        <TextBox x:Name="newQuote" HorizontalAlignment="Center" Height="61" Margin="97,10,96.6,0" TextWrapping="Wrap" Text="&lt;Цитата&gt;" VerticalAlignment="Top" Width="600" FontSize="16" FontStyle="Italic"/>
+        <TextBox x:Name="newAuthor" HorizontalAlignment="Center" Height="25" Margin="97,76,96.6,0" TextWrapping="Wrap" Text="&lt;Имя&gt;" VerticalAlignment="Top" Width="600" FontSize="18" FontWeight="Bold"/>
+        <Button x:Name="button" Content="Добавить" HorizontalAlignment="Center" Margin="0,110,0,0" VerticalAlignment="Top" Width="197" Height="40" FontSize="20" Click="Button_Click"/>
 
     </Grid>
 </Window>

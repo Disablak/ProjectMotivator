@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.IO;
 
 namespace ProjectMotivator
 {
@@ -22,6 +23,23 @@ namespace ProjectMotivator
         public Window1()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                using (StreamWriter sw = new StreamWriter("Data.txt", true, System.Text.Encoding.Default))
+                {
+                    sw.WriteLine(newQuote.Text + "|" + newAuthor.Text);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            Close();
         }
     }
 }
