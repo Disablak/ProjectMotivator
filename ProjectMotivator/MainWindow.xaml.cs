@@ -16,9 +16,6 @@ using System.IO;
 
 namespace ProjectMotivator
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
 
@@ -74,7 +71,6 @@ namespace ProjectMotivator
         {
             Window1 addNewQuote = new Window1();
             addNewQuote.Show();
-            //addNewQuote.Activate();
         }
     }
 }
