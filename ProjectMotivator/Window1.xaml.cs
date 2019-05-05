@@ -39,7 +39,8 @@ namespace ProjectMotivator
                 Console.WriteLine(ex.Message);
             }
 
-            Close();
+            newQuote.Text = "";
+            newAuthor.Text = "";
         }
     }
 }
