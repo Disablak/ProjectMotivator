@@ -45,14 +45,21 @@ namespace ProjectMotivator
         List<Quote> QuotesFromData()
         {
             List<Quote> quotes = new List<Quote>();
-            using (StreamReader sr = new StreamReader("Data.txt", System.Text.Encoding.Default))
+            try
             {
-                string line;
-                while ((line = sr.ReadLine()) != null)
+                using (StreamReader sr = new StreamReader("Data.txt", System.Text.Encoding.Default))
                 {
-                    string[] lines = line.Split('|');
-                    quotes.Add(new Quote(lines[0], lines[1]));
+                    string line;
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        string[] lines = line.Split('|');
+                        quotes.Add(new Quote(lines[0], lines[1]));
+                    }
                 }
+            }
+            catch(Exception e)
+            {
+                CitateLabel.Text = e.Message;
             }
             return quotes;
         }
